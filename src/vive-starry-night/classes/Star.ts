@@ -1,37 +1,45 @@
-import type { MinMax, Position, pSize, StarProps } from "../type";
-
-interface StarInfo {
-  readonly color: string;
-  readonly position: Position;
-  readonly lifeCycle: number;
-  readonly sparkle: number;
-  readonly createdAt: number;
-  readonly size: number;
-}
+import type { MinMax, Position, pSize, StarInfo, StarProps } from "../type";
 
 function random() {
   return Math.random();
 }
 
 export class Star {
-  public readonly info: StarInfo;
+  public info: StarInfo;
 
   constructor(props: StarProps) {
-    const color = props.color;
-    const position = this.getRandomPosition(props.pSize);
-    const size = this.getRandomAtt(props.size);
-    const lifeCycle = this.getRandomAtt(props.lifeCycle);
-    const sparkle = props.sparkle;
-    const createdAt = performance.now();
+    this.info = this.init(props);
+  }
 
-    this.info = Object.freeze({
-      color,
-      position: Object.freeze(position),
-      size,
-      lifeCycle,
-      sparkle,
-      createdAt,
-    });
+  private init(props: StarProps): StarInfo {
+    const info = {
+      ...this.createInfo(props).static,
+      ...this.createInfo(props).state,
+    };
+
+    return info;
+  }
+
+  public reset(props: StarProps) {
+    this.info = {
+      ...this.info,
+      ...this.createInfo(props).state,
+    };
+  }
+
+  private createInfo(props: StarProps) {
+    return {
+      static: {
+        color: props.color,
+        sparkle: props.sparkle,
+      },
+      state: {
+        position: this.getRandomPosition(props.pSize),
+        size: this.getRandomAtt(props.size),
+        lifeCycle: this.getRandomAtt(props.lifeCycle),
+        createdAt: performance.now(),
+      },
+    };
   }
 
   private getRandomPosition(range: pSize): Position {
