@@ -20,6 +20,7 @@ export interface LifeCycle extends MinMax {
 
 export interface StarProps {
   color: string;
+  // star's min, max size
   size: Size;
   // parent element's size
   pSize: pSize;
@@ -27,6 +28,10 @@ export interface StarProps {
   lifeCycle: LifeCycle;
   // sparkle per s
   sparkle: number;
+}
+
+export interface StarConfig extends StarProps {
+  density: number;
 }
 
 export interface Position {
