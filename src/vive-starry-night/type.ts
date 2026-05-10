@@ -1,10 +1,5 @@
-/**
- * parent element's size
- */
-export interface pSize {
-  width: number;
-  height: number;
-}
+import type { Star } from "./class/Star";
+import type { ShapeType } from "./draw/Shape";
 
 export interface MinMax {
   min: number;
@@ -32,21 +27,13 @@ export interface LifeCycle extends MinMax {
  *
  * used in Star class
  */
-export interface StarProps {
+export interface StarConfig {
+  density: number;
   color: string;
   size: Size;
-  pSize: pSize;
   lifeCycle: LifeCycle;
   sparkle: number;
-}
-
-/**
- * managing star quantity
- *
- * used in StarField class
- */
-export interface StarConfig extends StarProps {
-  density: number;
+  shape: ShapeType;
 }
 
 export interface Position {
@@ -64,4 +51,12 @@ export interface StarInfo {
   sparkle: number;
   createdAt: number;
   size: number;
+}
+
+/**
+ * store
+ */
+export interface StarBucket {
+  config: StarConfig;
+  stars: Star[];
 }
