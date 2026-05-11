@@ -13,7 +13,7 @@ export function draw(
     const _shape = bucket.config.shape;
     const path = shape[_shape];
     for (const star of bucket.stars) {
-      const { position, color, size, sparkle, createdAt, lifeCycle } =
+      const { position, color, size, twinkle, createdAt, lifeCycle } =
         star.info;
 
       const x = position.x * width;
@@ -25,9 +25,9 @@ export function draw(
 
       const fade = smoothstep(mirrored);
 
-      const twinkle = Math.sin(now * 0.003 + x + y) * sparkle;
+      const t = Math.sin(now * 0.003 + x + y) * twinkle;
 
-      const alpha = clamp(fade + twinkle * 0.3);
+      const alpha = clamp(fade + t * 0.2);
 
       ctx.globalAlpha = alpha;
       ctx.fillStyle = color;

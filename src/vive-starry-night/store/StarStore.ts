@@ -17,30 +17,47 @@ export class StarStore {
   private createBucket(config: StarConfig): StarBucket {
     return {
       config,
-      stars: this.createStars(config),
+      stars: this.createBucketStars(config),
     };
   }
 
-  createStars(starConfig: StarConfig): Star[] {
+  private createBucketStars(starConfig: StarConfig): Star[] {
     const maxCount = this.getMaxCount(starConfig.density);
-    return Array.from({ length: maxCount }, () => new Star(starConfig));
+    return this.createStars(maxCount, starConfig);
+  }
+
+  private createStars(count: number, config: StarConfig) {
+    return Array.from({ length: count }, () => new Star(config));
   }
 
   private getMaxCount(density: number) {
     return Math.floor((this.canvasSize / 1000) * density);
   }
 
-  update(now: number) {
+  public update(now: number) {
     for (const bucket of this.buckets) {
       for (const star of bucket.stars) {
         const { createdAt, lifeCycle } = star.info;
         const age = now - createdAt;
 
-        // console.log(age, lifeCycle);
-
         if (age >= lifeCycle * 1000) {
           star.reset(bucket.config);
         }
+      }
+    }
+  }
+
+  public onResize(canvasSize: number) {
+    this.canvasSize = canvasSize;
+
+    for (const bucket of this.buckets) {
+      const targetCount = this.getMaxCount(bucket.config.density);
+      const diff = targetCount - bucket.stars.length;
+
+      if (diff > 0) {
+        bucket.stars.push(...this.createStars(diff, bucket.config));
+      } else if (diff < 0) {
+        bucket.stars.length = targetCount;
       }
     }
   }

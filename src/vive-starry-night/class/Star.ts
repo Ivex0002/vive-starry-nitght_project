@@ -25,7 +25,7 @@ export class Star {
   private createStatic(config: StarConfig) {
     return {
       color: config.color,
-      sparkle: config.sparkle,
+      twinkle: config.twinkle,
     };
   }
 

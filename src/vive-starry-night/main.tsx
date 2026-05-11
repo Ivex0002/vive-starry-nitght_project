@@ -5,12 +5,14 @@ import { INIT_VAL } from "./INIT_VAL";
 
 interface Props {
   starConfigs?: StarConfig[];
-  backgroundColor?: string;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
 export function ViveStarryNight({
   starConfigs = INIT_VAL,
-  backgroundColor = "#000",
+  className,
+  style,
 }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -22,7 +24,14 @@ export function ViveStarryNight({
   return (
     <canvas
       ref={canvasRef}
-      style={{ backgroundColor, width: "100%", height: "100%" }}
+      className={className}
+      style={{ ...INIT_STYLE, ...style }}
     />
   );
 }
+
+const INIT_STYLE: React.CSSProperties = {
+  width: "100%",
+  height: "100%",
+  backgroundColor: "#000",
+};

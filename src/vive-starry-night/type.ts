@@ -32,7 +32,7 @@ export interface StarConfig {
   color: string;
   size: Size;
   lifeCycle: LifeCycle;
-  sparkle: number;
+  twinkle: number;
   shape: ShapeType;
 }
 
@@ -48,7 +48,7 @@ export interface StarInfo {
   color: string;
   position: Position;
   lifeCycle: number;
-  sparkle: number;
+  twinkle: number;
   createdAt: number;
   size: number;
 }
