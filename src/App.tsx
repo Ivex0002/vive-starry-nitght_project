@@ -12,7 +12,7 @@ export function App() {
       {/* custom example */}
       <div style={{ width: "50%", position: "relative" }}>
         <img src={img} style={{ width: "100%", height: "100%" }} />
-        <div style={{ position: "absolute", inset: "0 0 15rem 0" }}>
+        <div style={{ position: "absolute", inset: "0 0 25% 0" }}>
           <ViveStarryNight
             style={{
               position: "absolute",
@@ -45,12 +45,12 @@ const starConfigs: StarConfig[] = [
     shape: "cross",
   },
   {
-    color: "#b4ffbe",
+    color: "#cc00ff",
     density: 0.01,
     lifeCycle: { min: 4, max: 5 },
-    size: { min: 2, max: 3 },
+    size: { min: 3, max: 4 },
     twinkle: 0.1,
-    shape: "diamond",
+    shape: "x",
   },
   {
     color: "#0066ff",
