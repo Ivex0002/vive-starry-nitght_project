@@ -21,8 +21,6 @@ export function App() {
         <div style={{ position: "absolute", inset: "0 0 25% 0" }}>
           <ViveStarryNight
             style={{
-              position: "absolute",
-              inset: 0,
               backgroundColor: "transparent",
             }}
             starConfigs={starConfigs}
