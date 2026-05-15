@@ -1,6 +1,6 @@
 import type { StarConfig } from "./type";
 
-const SHAPE: StarConfig["shape"] = "cross";
+const SHAPE: StarConfig["shape"] = { type: "cross" };
 
 export const INIT_VAL: StarConfig[] = [
   {

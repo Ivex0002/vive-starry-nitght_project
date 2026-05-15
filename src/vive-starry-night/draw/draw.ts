@@ -11,7 +11,8 @@ export function draw(
 
   for (const bucket of buckets) {
     const _shape = bucket.config.shape;
-    const path = shape[_shape];
+    const path = _shape.type === "custom" ? _shape.path : shape[_shape.type];
+
     for (const star of bucket.stars) {
       const { position, color, size, twinkle, createdAt, lifeCycle } =
         star.info;

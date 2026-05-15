@@ -33,8 +33,17 @@ export interface StarConfig {
   size: Size;
   lifeCycle: LifeCycle;
   twinkle: number;
-  shape: ShapeType;
+  shape: ShapeConfig;
 }
+
+export type ShapeConfig =
+  | {
+      type: ShapeType;
+    }
+  | {
+      type: "custom";
+      path: Path2D;
+    };
 
 export interface Position {
   x: number;
