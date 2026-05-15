@@ -14,7 +14,7 @@
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "tailwindcss": "^4.2.2",
-    "vive-starry-night": "file:..\\..\\vive-starry-night\\vive-starry-night-0.0.1.tgz"
+    "vive-starry-night": "^0.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",

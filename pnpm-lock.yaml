@@ -21,8 +21,8 @@ importers:
         specifier: ^4.2.2
         version: 4.2.2
       vive-starry-night:
-        specifier: file:..\..\vive-starry-night\vive-starry-night-0.0.1.tgz
-        version: file:../../vive-starry-night/vive-starry-night-0.0.1.tgz(react@19.2.5)
+        specifier: ^0.0.2
+        version: 0.0.2(react@19.2.5)
     devDependencies:
       '@eslint/js':
         specifier: ^9.39.4
@@ -1077,9 +1077,8 @@ packages:
       yaml:
         optional: true
 
-  vive-starry-night@file:../../vive-starry-night/vive-starry-night-0.0.1.tgz:
-    resolution: {integrity: sha512-sxqE30UdX70wtzDVIqsXsZpZUFmQBRIOtMiFmptx99/Caj5SlXrcsTfsao4X/17p9iKs/4kow9PyUq7IvYvCGA==, tarball: file:../../vive-starry-night/vive-starry-night-0.0.1.tgz}
-    version: 0.0.1
+  vive-starry-night@0.0.2:
+    resolution: {integrity: sha512-5yrkJbLmUlY8yFERq/cNH++MtDjvsD1etVfAHN7fuEfc7qg7Ye2rdOy8I5WtemyfqGwZUnInKbGNA7m1zIf3CA==}
     peerDependencies:
       react: ^18 || ^19
 
@@ -2042,7 +2041,7 @@ snapshots:
       fsevents: 2.3.3
       jiti: 2.6.1
 
-  vive-starry-night@file:../../vive-starry-night/vive-starry-night-0.0.1.tgz(react@19.2.5):
+  vive-starry-night@0.0.2(react@19.2.5):
     dependencies:
       react: 19.2.5
 
