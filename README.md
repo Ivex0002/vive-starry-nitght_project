@@ -4,6 +4,10 @@ Lightweight React canvas starfield background component.
 
 Animated stars rendered with Canvas2D using configurable density, lifecycle, twinkle, size, and custom shapes.
 
+[![npm version](https://img.shields.io/npm/v/vive-starry-night)](https://www.npmjs.com/package/vive-starry-night)
+[![github](https://img.shields.io/badge/github-repo-blue)](https://github.com/Ivex0002/vive-starry-night_lib)
+[![test project](https://img.shields.io/badge/test--project-repo-blue)](https://github.com/Ivex0002/vive-starry-nitght_project)
+
 ---
 
 ## Preview
@@ -11,7 +15,6 @@ Animated stars rendered with Canvas2D using configurable density, lifecycle, twi
 <img width="1913" height="912" alt="Honeycam 2026-05-15 15-30-48" src="https://github.com/user-attachments/assets/c3b36ca6-8940-4fdd-863a-f29ad12a66ba" />
 <img width="949" height="525" alt="Honeycam 2026-05-15 15-31-53" src="https://github.com/user-attachments/assets/fc3581ef-73ad-47b5-9d12-f18c088bf9ab" />
 <img width="930" height="486" alt="Honeycam 2026-05-15 15-31-28" src="https://github.com/user-attachments/assets/5babfed2-3cab-4c6f-8851-17b492398849" />
-
 
 ---
 
