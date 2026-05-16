@@ -7,6 +7,7 @@ Animated stars rendered with Canvas2D using configurable density, lifecycle, twi
 [![npm version](https://img.shields.io/npm/v/vive-starry-night)](https://www.npmjs.com/package/vive-starry-night)
 [![github](https://img.shields.io/badge/github-repo-blue)](https://github.com/Ivex0002/vive-starry-night_lib)
 [![test project](https://img.shields.io/badge/test--project-repo-blue)](https://github.com/Ivex0002/vive-starry-nitght_project)
+[![quick use sandpack](https://img.shields.io/badge/quick--use-sandpack-blue)](https://portfolio-mu-three-q0zduucb35.vercel.app/vive-starry-night)
 
 ---
 
@@ -43,6 +44,14 @@ or
 ```bash
 npm install vive-starry-night
 ```
+
+---
+
+## Requirements
+
+- React 18+
+- Browser environment required
+- Canvas2D support required
 
 ---
 
